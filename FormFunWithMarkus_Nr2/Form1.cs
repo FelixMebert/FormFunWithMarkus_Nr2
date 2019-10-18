@@ -24,7 +24,7 @@ namespace FormFunWithMarkus_Nr2
             object selectedval = cBGertränkeart.SelectedItem;
            if(cBGertränkeart.SelectedItem == selectedval )
             {
-                cBSorte.Items.Add("Weizen");
+                cBSorte.Items.Add("Export");
             }
         }
 
