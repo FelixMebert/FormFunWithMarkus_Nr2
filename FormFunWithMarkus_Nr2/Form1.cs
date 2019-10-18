@@ -21,12 +21,23 @@ namespace FormFunWithMarkus_Nr2
         private void cBGertränkeart_SelectedIndexChanged(object sender, EventArgs e)
         {
             cBSorte.Items.Clear();
-            object selectedval = cBGertränkeart.SelectedItem;
+            object valBier = ;
            if(cBGertränkeart.SelectedItem == selectedval )
             {
                 cBSorte.Items.Add("Export");
             }
+
+
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSchließen_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

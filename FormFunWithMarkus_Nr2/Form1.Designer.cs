@@ -38,6 +38,7 @@
             this.tbSumme = new System.Windows.Forms.TextBox();
             this.cBAnzahl = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnSchließen = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cBGertränkeart
@@ -143,11 +144,22 @@
             this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 11;
             // 
+            // btnSchließen
+            // 
+            this.btnSchließen.Location = new System.Drawing.Point(341, 390);
+            this.btnSchließen.Name = "btnSchließen";
+            this.btnSchließen.Size = new System.Drawing.Size(85, 23);
+            this.btnSchließen.TabIndex = 12;
+            this.btnSchließen.Text = "schließen";
+            this.btnSchließen.UseVisualStyleBackColor = true;
+            this.btnSchließen.Click += new System.EventHandler(this.btnSchließen_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSchließen);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.cBAnzahl);
             this.Controls.Add(this.tbSumme);
@@ -160,6 +172,7 @@
             this.Controls.Add(this.cBGertränkeart);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,6 +190,7 @@
         private System.Windows.Forms.TextBox tbSumme;
         private System.Windows.Forms.ComboBox cBAnzahl;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnSchließen;
     }
 }
 
