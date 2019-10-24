@@ -20,12 +20,29 @@ namespace FormFunWithMarkus_Nr2
 
         private void cBGertränkeart_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // ToDo: Replayce with Switch
             cBSorte.Items.Clear();
-            object valBier = ;
-           if(cBGertränkeart.SelectedItem == selectedval )
+            string valBier = "Bier";
+            string valSotfdrinks = "Softdrinks";
+            if (cBGertränkeart.SelectedItem.ToString() == valBier)
             {
+                cBSorte.Items.Add("Weizen");
                 cBSorte.Items.Add("Export");
+                cBSorte.Items.Add("Pils");
             }
+
+            else if (cBGertränkeart.SelectedItem.ToString() == valSotfdrinks)
+            {
+                cBSorte.Items.Add("Fanta");
+                cBSorte.Items.Add("Sprite");
+                cBSorte.Items.Add("Cola");
+            }
+
+            //object valBier = new Bier();
+            //if (cBGertränkeart.SelectedItem == valBier)
+            //{
+            //    cBSorte.Items.Add("Export");
+            //}
 
 
         }
