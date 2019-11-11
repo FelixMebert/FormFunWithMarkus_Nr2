@@ -37,7 +37,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tbSumme = new System.Windows.Forms.TextBox();
             this.cBAnzahl = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbPreis = new System.Windows.Forms.TextBox();
             this.btnSchließen = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -49,7 +49,8 @@
             "Fruchtsaft",
             "Wasser",
             "Bier",
-            "Energie Drink"});
+            "Energie Drink",
+            "--Bitte auswählen--"});
             this.cBGertränkeart.Location = new System.Drawing.Point(8, 64);
             this.cBGertränkeart.Name = "cBGertränkeart";
             this.cBGertränkeart.Size = new System.Drawing.Size(121, 24);
@@ -81,6 +82,7 @@
             this.cBSorte.Name = "cBSorte";
             this.cBSorte.Size = new System.Drawing.Size(121, 24);
             this.cBSorte.TabIndex = 2;
+            this.cBSorte.SelectedIndexChanged += new System.EventHandler(this.cBSorte_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -123,7 +125,6 @@
             // 
             this.cBAnzahl.FormattingEnabled = true;
             this.cBAnzahl.Items.AddRange(new object[] {
-            "0",
             "1",
             "2",
             "3",
@@ -133,16 +134,18 @@
             this.cBAnzahl.Name = "cBAnzahl";
             this.cBAnzahl.Size = new System.Drawing.Size(121, 24);
             this.cBAnzahl.TabIndex = 10;
+            this.cBAnzahl.SelectedIndexChanged += new System.EventHandler(this.cBAnzahl_SelectedIndexChanged);
             // 
-            // textBox1
+            // tbPreis
             // 
-            this.textBox1.AccessibleDescription = "";
-            this.textBox1.AccessibleName = "";
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(165, 111);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 11;
+            this.tbPreis.AccessibleDescription = "";
+            this.tbPreis.AccessibleName = "";
+            this.tbPreis.Enabled = false;
+            this.tbPreis.Location = new System.Drawing.Point(165, 111);
+            this.tbPreis.Name = "tbPreis";
+            this.tbPreis.Size = new System.Drawing.Size(100, 22);
+            this.tbPreis.TabIndex = 11;
+            this.tbPreis.TextChanged += new System.EventHandler(this.tbPreis_TextChanged);
             // 
             // btnSchließen
             // 
@@ -160,7 +163,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnSchließen);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbPreis);
             this.Controls.Add(this.cBAnzahl);
             this.Controls.Add(this.tbSumme);
             this.Controls.Add(this.label5);
@@ -189,7 +192,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tbSumme;
         private System.Windows.Forms.ComboBox cBAnzahl;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbPreis;
         private System.Windows.Forms.Button btnSchließen;
     }
 }

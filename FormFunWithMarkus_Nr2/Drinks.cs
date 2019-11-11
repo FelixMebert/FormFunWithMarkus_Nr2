@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FormFunWithMarkus_Nr2
 {
-    class Drinks
+    public class Drinks
     {
         public double Price
         {
@@ -15,7 +15,15 @@ namespace FormFunWithMarkus_Nr2
 
         public double Volume
         {
-            get;set;
+            get; set;
+        }
+        public string Name
+        {
+            get; set;
+        }
+        public int Count
+        {
+            get; set;
         }
     }
 }

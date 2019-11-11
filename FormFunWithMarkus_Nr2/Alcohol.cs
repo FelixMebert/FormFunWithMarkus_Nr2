@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace FormFunWithMarkus_Nr2
 {
-    public class Bier 
+    public class Alcohol : Drinks
     {
-
+        public string Alc_vol
+        {
+            get; set;
+        }
     }
 }
