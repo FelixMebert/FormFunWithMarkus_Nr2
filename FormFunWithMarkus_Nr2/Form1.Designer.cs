@@ -39,6 +39,7 @@
             this.cBAnzahl = new System.Windows.Forms.ComboBox();
             this.tbPreis = new System.Windows.Forms.TextBox();
             this.btnSchließen = new System.Windows.Forms.Button();
+            this.btnAdmin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cBGertränkeart
@@ -145,7 +146,6 @@
             this.tbPreis.Name = "tbPreis";
             this.tbPreis.Size = new System.Drawing.Size(100, 22);
             this.tbPreis.TabIndex = 11;
-            this.tbPreis.TextChanged += new System.EventHandler(this.tbPreis_TextChanged);
             // 
             // btnSchließen
             // 
@@ -157,11 +157,22 @@
             this.btnSchließen.UseVisualStyleBackColor = true;
             this.btnSchließen.Click += new System.EventHandler(this.btnSchließen_Click);
             // 
+            // btnAdmin
+            // 
+            this.btnAdmin.Location = new System.Drawing.Point(641, 390);
+            this.btnAdmin.Name = "btnAdmin";
+            this.btnAdmin.Size = new System.Drawing.Size(76, 22);
+            this.btnAdmin.TabIndex = 13;
+            this.btnAdmin.Text = "Admin";
+            this.btnAdmin.UseVisualStyleBackColor = true;
+            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAdmin);
             this.Controls.Add(this.btnSchließen);
             this.Controls.Add(this.tbPreis);
             this.Controls.Add(this.cBAnzahl);
@@ -194,6 +205,7 @@
         private System.Windows.Forms.ComboBox cBAnzahl;
         private System.Windows.Forms.TextBox tbPreis;
         private System.Windows.Forms.Button btnSchließen;
+        private System.Windows.Forms.Button btnAdmin;
     }
 }
 

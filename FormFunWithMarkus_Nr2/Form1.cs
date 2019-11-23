@@ -27,7 +27,6 @@ namespace FormFunWithMarkus_Nr2
 
         private void cBGertränkeart_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // ToDo: Replayce with Switch
             
             cBSorte.Items.Clear();
 
@@ -56,10 +55,8 @@ namespace FormFunWithMarkus_Nr2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Drinks[] Getränke = new Drinks[8];
 
-
-            Getränke[0] = fanta;
+            
         }
 
         private void btnSchließen_Click(object sender, EventArgs e)
@@ -77,43 +74,29 @@ namespace FormFunWithMarkus_Nr2
 
         private void cBAnzahl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            double price;
-            switch (cBAnzahl.SelectedIndex)
-            {
-                case 0:
-                    price = Convert.ToDouble(tbPreis.Text);
-                    price = price * 1;
-                    tbSumme.Text = price.ToString();
-                    break;
-
-                case 1:
-                    price = Convert.ToDouble(tbPreis.Text);
-                    price = price * 2;
-                    tbSumme.Text = price.ToString();
-                    break;
-
-                case 2:
-                    price = Convert.ToDouble(tbPreis.Text);
-                    price = price * 3;
-                    tbSumme.Text = price.ToString();
-                    break;
-
-                case 3:
-                    price = Convert.ToDouble(tbPreis.Text);
-                    price = price * 4;
-                    tbSumme.Text = price.ToString();
-                    break;
-                case 4:
-                    price = Convert.ToDouble(tbPreis.Text);
-                    price = price * 5;
-                    tbSumme.Text = price.ToString();
-                    break;
-            }
+            double price = Convert.ToDouble(tbPreis.Text);
+            int count = Convert.ToInt32(cBAnzahl.Text);
+            double result = 0.0f;
+            result = price* count;
+            tbSumme.Text = result.ToString();
         }
 
-        private void tbPreis_TextChanged(object sender, EventArgs e)
+        private void btnAdmin_Click(object sender, EventArgs e)
         {
+            Hide();
+            Form2 form2 = new Form2();
+            form2.FormClosed += Form2_FormClosed;
+            form2.Show();
+        }
 
+        private void Form2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Show();
+            Form2 form2 = (Form2)sender;
+            Drinks[] Getränke = new Drinks[form2.Softdrinksum];
+
+
+            Getränke[0] = fanta;
         }
     }
 }
