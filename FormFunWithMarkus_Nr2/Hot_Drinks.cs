@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace FormFunWithMarkus_Nr2
 {
-    class Hot_Drinks
+    class Hot_Drinks : Drinks
     {
         public double Temp
         {
-            get;set;
+            get; set;
         }
+
     }
 }

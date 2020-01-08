@@ -8,6 +8,7 @@ namespace FormFunWithMarkus_Nr2
 {
     public class Beer : Alcohol
     {
-        
+
     }
+    
 }
